@@ -1,0 +1,27 @@
+{
+  "family": "spring-boot-app",
+  "containerDefinitions": [
+    {
+      "name": "web",
+      "image": "<IMAGE_URI>",
+      "cpu": 128,
+      "memoryReservation": 128,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "protocol": "tcp"
+        }
+      ],
+	  "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "spring-boot-app-logs",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "aws-spring-boot-app-logs"
+        }
+      },
+      "command": [],
+      "essential": true
+    }
+  ]
+}

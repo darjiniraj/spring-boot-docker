@@ -1,0 +1,14 @@
+{
+  "cluster": "spring-boot-app-clusters",
+  "serviceName": "spring-boot-apps-service-ecs",
+  "taskDefinition": "spring-boot-app",
+  "loadBalancers": [
+    {
+      "targetGroupArn": "<LOAD_BALANCER_ARN>",
+      "containerName": "web",
+      "containerPort": 8080
+    }
+  ],
+  "desiredCount": 2,
+  "role": "AWSServiceRoleForECS"
+}

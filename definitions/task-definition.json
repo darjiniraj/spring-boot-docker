@@ -1,0 +1,19 @@
+{
+  "family": "spring-boot-app",
+  "containerDefinitions": [
+    {
+      "name": "web",
+      "image": "<IMAGE_URI>",
+      "cpu": 128,
+      "memoryReservation": 128,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "protocol": "tcp"
+        }
+      ],
+      "command": [],
+      "essential": true
+    }
+  ]
+}
